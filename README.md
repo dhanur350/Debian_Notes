@@ -17,3 +17,32 @@
 
 ## Now there is a new bug whenever you feel installing Debian and miss minimize and maximize buttons on top left panel then write this command in terminal
 - `gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"`
+
+## Install .NET Core in Debian
+- wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+- sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0
+- sudo apt-get install -y dotnet-runtime-5.0
+
+- sudo apt-get update; \ sudo apt-get install -y apt-transport-https && \ sudo apt-get update && \ sudo apt-get install -y aspnetcore-runtime-5.0
+
+## Install Microsoft SQL server in Linux Debain
+- wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+## This may seems to be weird to add Ubuntu Repo in debian Termainal Surces.list but this will be the only way to install MSSQL 
+- sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
+# After that install MSSQL Server and Tools
+- sudo apt-get update
+- sudo apt-get install -y mssql-server
+- sudo apt-get install mssql-tools
+## Config MSSQL
+- sudo /opt/mssql/bin/mssql-conf setup
+- sudo ls /opt/mssql-tools/bin/sqlcmd*
+- sudo ln -sfn /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd
+
+## Connect Locally on MSSQL
+- `sqlcmd -S localhost -U SA -P '<YourPassword>'`
