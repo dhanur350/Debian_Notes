@@ -46,3 +46,32 @@ rm packages-microsoft-prod.deb
 
 ## Connect Locally on MSSQL
 - `sqlcmd -S localhost -U SA -P '<YourPassword>'`
+
+## Installing Java in Debian 
+
+Hello guys,  Download java 8, if you are using x64 OS Linux then download this file jdk-8u333-linux-x64.tar.gz 
+then extract that file.... 
+rename that folder... ( my folder name jdk-8)
+move that folder here  /usr/lib/jvm/      ( java folder path )
+
+*plz note :  my folder name jdk-8 , change your java folder name  /usr/lib/jvm/{here}/
+loader.jar  is java8 testing file ( burp suite software )
+then  switch your java version ... 
+sudo update-alternatives --config java
+
+then export path in bashrc file like this
+export PATH="$PATH:/usr/lib/jvm/jdk-8/bin"
+
+then create  java alternative version... type this commands..
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-8/bin/java 1
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-8/bin/javac 1
+sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk-8/bin/jar 1
+sudo update-alternatives --config java
+
+You'll see this written in the terminal
+java version "1.8.0_333"
+Java(TM) SE Runtime Environment (build 1.8.0_333-b02)
+Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
+
+That means you successfully installed Java
