@@ -14,3 +14,6 @@
 - sudo modprobe -v iwlwifi
 ## To get G++ and GCC installed 
 - sudo apt-get install build-essential
+
+## Now there is a new bug whenever you feel installing Debian and miss minimize and maximize buttons on top left panel then write this command in terminal
+- `gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"`
