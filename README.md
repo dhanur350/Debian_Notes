@@ -75,3 +75,14 @@ Java(TM) SE Runtime Environment (build 1.8.0_333-b02)
 Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 
 That means you successfully installed Java
+
+## Install MongoDB in Debian Linux
+
+- wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+- echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+- sudo apt update
+- sudo apt-get install -y mongodb-org
+## Start mongodb
+- sudo systemctl start mongod
+- sudo systemctl enable mongod
+- sudo systemctl status mongod
