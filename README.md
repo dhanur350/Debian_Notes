@@ -86,3 +86,8 @@ That means you successfully installed Java
 - sudo systemctl start mongod
 - sudo systemctl enable mongod
 - sudo systemctl status mongod
+
+## Install MySQL
+- sudo apt install snapd
+- snap install gnome-3-38-2004
+- snap install mysql-server mysql-workbench-community
