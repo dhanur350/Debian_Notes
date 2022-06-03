@@ -91,3 +91,9 @@ That means you successfully installed Java
 - sudo apt install snapd
 - snap install gnome-3-38-2004
 - snap install mysql-server mysql-workbench-community
+
+## Google Meet Screen Sharing problem Solution
+- sudo nano /etc/gdm3/daemon.conf
+- uncomment the line
+- #WaylandEnable=false to be WaylandEnable=false and then reboot
+- This'll solve all problems of Google Meet Screen issue
