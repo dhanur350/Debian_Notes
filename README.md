@@ -92,6 +92,12 @@ That means you successfully installed Java
 - snap install gnome-3-38-2004
 - snap install mysql-server mysql-workbench-community
 
+# If this doesn't work then try this
+# Download this config repo from mysql original website to add it in repo of linux
+- sudo dpkg -i mysql-apt-config_0.8.22-1_all1.deb
+- sudo apt update
+- sudo apt install mysql-server
+
 ## Google Meet Screen Sharing problem Solution
 - sudo nano /etc/gdm3/daemon.conf
 - uncomment the line
