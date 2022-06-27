@@ -105,6 +105,6 @@ That means you successfully installed Java
 - This'll solve all problems of Google Meet Screen issue
 
 ## Set Airplane mode disabled while lid is closed
-# I'm facing wifi turn off issue when laptop lid is closed then I tried this command
+# I'm facing wifi turn off issue when laptop lid is closed, then I tried this command
 - sudo setkeycodes e058 245 e057 245
 - It's working
