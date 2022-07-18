@@ -110,4 +110,10 @@ That means you successfully installed Java
 - It's working
 
 ## Install Tomcat-9 in Debian
-- 
+- sudo apt install tomcat9 tomcat9-admin
+- ss -ltn
+- sudo sytemctl enable tomcat9
+- sudo ufw allw from any to any port 8080 proto tcp
+- If ufw doesn't work then run sudo apt install ufw
+- `To check it's working simple type localhost:8080`
+- `You'll see something like this "Tomcat9 is working successfully"`
