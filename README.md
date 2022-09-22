@@ -117,3 +117,12 @@ That means you successfully installed Java
 - If ufw doesn't work then run sudo apt install ufw
 - `To check it's working simple type localhost:8080`
 - `You'll see something like this "Tomcat9 is working successfully"`
+
+# Install Android Studio in Debian
+- Only one way to install
+- ## sudo snap install android-studio --classic
+- If you get an error of Android SDK is missing the use this command
+- sudo apt-get install android-sdk
+- Then export their path in Terminal here
+- export ANDROID_HOME="/usr/lib/android-sdk/"
+- export PATH="${PATH}:${ANDROID_HOME}tools/:${ANDROID_HOME}platform-tools/"
